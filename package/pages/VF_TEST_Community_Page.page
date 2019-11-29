@@ -1,0 +1,38 @@
+
+<apex:page sidebar="false" standardStylesheets="false" showHeader="false" applyBodyTag="false" applyHtmlTag= "false" docType="html-5.0" controller="CTRL_App" >
+
+<head>
+  <meta charset="utf-8" />
+  <title>Agmis Internal Force</title>
+  <base href="/"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="theme-color" content="#ed1a3b" />
+
+  <link rel="icon" type="image/x-icon" href="http://localhost:4200/assets/favicon.png" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+<script type="text/javascript">
+              window._VfResources = 'http://localhost:4200';
+            </script>
+          </head>
+
+<body>
+<app-root>
+  <div class="splash-screen">
+    <div style="height: 35%;"></div>
+    <div class="fade-in">
+      <div class="logo-container">
+        <img src="http://localhost:4200/assets/images/logo.png" alt="Agmis" />
+      </div>
+      <div class="spinner">
+        <div class="dot1"></div>
+        <div class="dot2"></div>
+      </div>
+
+    </div>
+  </div>
+</app-root>
+<c:CT_CTRL_ClaimLines />
+<script src="http://localhost:4200/runtime.js" defer="true"></script><script src="http://localhost:4200/polyfills.js" defer="true"></script><script src="http://localhost:4200/styles.js" defer="true"></script><script src="http://localhost:4200/vendor.js" defer="true"></script><script src="http://localhost:4200/main.js" defer="true"></script></body>
+
+</apex:page>
