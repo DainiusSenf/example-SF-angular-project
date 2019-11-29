@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {RemoteResponseType, SalesforceBaseService} from './salesforce2.service';
+import {RemoteResponseType, SalesforceBaseService} from './salesforceBaseService.service';
 import {Observable, of} from 'rxjs';
 import {catchError} from 'rxjs/operators';
 
