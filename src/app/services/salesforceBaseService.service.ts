@@ -57,16 +57,15 @@ export abstract class SalesforceBaseService {
     config: RemoteActionConfig = defaultRemoteActionConfig,
     controller: string = this.controller
   ): Observable<RemoteResponseType> {
-    const paramsJson = params.map(param => param instanceof Object && JSON.stringify(param) || param);
     console.log(
       'Remote Action: ',
       methodPath,
-      paramsJson
+      params
     );
 
     return new Observable((observer) => {
       Visualforce.remoting.Manager.invokeAction(
-        `${controller}.${methodPath}`, ...paramsJson,
+        `${controller}.${methodPath}`, ...params,
         (result, event) => {
           if (event.status) {
             observer.next(result);

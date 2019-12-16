@@ -36,5 +36,24 @@ export class SalesforceService extends SalesforceBaseService {
     return this.callSfMethods('CTRL_ClaimLines', 'getClaimLines', [filters]);
   }
 
+  public getFilterClients(filters): Observable<any> {
+    return this.callSfMethods('CTRL_Filters', 'getClients', [filters]);
+  }
+
+  public getTopFinancialIssuersData(filters, queryLimit): Observable<any> {
+    return this.callSfMethods('CTRL_ClaimLines', 'getTopFinancialIssuersData', [filters, queryLimit]);
+  }
+
+  public getClaimLinesAmountsByStatus(filters): Observable<any> {
+    return this.callSfMethods('CTRL_ClaimLines', 'getClaimLinesAmountsByStatus', [filters]);
+  }
+
+  public getClaimLinesAmountsByType(filters): Observable<any> {
+    return this.callSfMethods('CTRL_ClaimLines', 'getClaimLinesAmountsByType', [filters]);
+  }
+
+  public getTopClaimLinesAmountByCountry(filters): Observable<any> {
+    return this.callSfMethods('CTRL_ClaimLines', 'getTopClaimLinesAmountByCountry', [filters]);
+  }
 
 }
